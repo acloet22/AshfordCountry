@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+	<head>
+		<link rel="stylesheet" type="text/css" href="Stylesheet/Home.css">
+<div class="navbar">
+<ul>
+	<a>Home</a>
+	<a href="Setting.html">Setting</a>
+		<i class="fa fa-caret-down"></i>
+	<a>Characters</a>
+</ul>
+</div>
+	</head>
+	
+	<title>
+	Characters
+	</title>
+	
+	<body>
+	
+	<div class="playerClass">
+		<h2>
+			<b>The Player</b>
+		</h2>
+	<div class="imgContainer">
+		<button class="leftArrow" onclick="plusDivs(-1)">&#10094;</button>
+			<img class="PlayerSlide" src="StyleSheet/Pictures/call-of-cthulhu-investigation.png" width:"600px">
+			<img class="PlayerSlide" src="StyleSheet/Pictures/Professor.png" width:"600px">
+		<button class="rightArrow" onclick="plusDivs(+1)">&#10095;</button>
+	</div>
+		<p>
+			The world of Ashford Country offers a variety of professions for your character to assume.  No matter what though what side or path you choose you will go up against the 
+			might of the Eldritch Gods that rules these lands.  Choose carefully your choices will greatly impact the story, and will have wide ranging impacts on the environment and the characters you meet and even those you do not.  
+			While your choices also bind you they also free you.  No character is bound by destiny, while their fates may hang in the balance you can save them.
+		</p>
+	</div>
+		<h2>
+			Eldritch Abmoniations
+		</h2>
+		<p>
+			Beings and Creatures as old and older then man and time itself, nothing in the English Language can describe them.  Their power is far above anything that humanity could produce within the next several thousand years.  
+			Despite their power, some do not care what becomes of humanity and few even offer support due to finding intrigue in our actions.  Religions, cults, and sects have been formed many hoping to gain power.
+		</p>
+	
+		<h2>
+			The Living Shadow
+		</h2>
+		<p>
+			A formless being born from the darkness of void of space.  This being is constantly growing in attempt to spread it's influence throughout the universe.  On each world it travels to it selects one being to become it's herald.
+			It arrived in our solar system a hundreds of years ago.  
+		</p>
+	
+		<h2>
+			The Deep
+		</h2>
+		<p>
+			As old as the ocean itself if not older.  The Deep is not a single Eldritch God but an entire colony, made up of various Gods of different strengths.  
+			Fortuantely for humanity not everything within the Deep is antagonistic towards humans, if they are left alone.  Entrances have been found to their ocean kingdoms and attempts have been made to guard or seal them.
+			Even though the entrances have been sealed cracks have been found many with signs of something escaping.  
+			It's said that animals long thought extinct still swim in their underwater kingdom.
+		</p>
+	
+	<a href="#" class="previous round">&#8249;</a>
+	<a href="#" class="next round">&#8250;</a>
+	
+	<h2>The Collective</h2>
+	<p>
+	For centuries all across there have been whispers of a group of individuals that control the world known as the illuminati.  They are known as the Collective.  Individuals that have made contact or dabbled in the arcane and eldritch.
+	If you have encountered such things then you are a member of the Collective.  The Collective was fractured almost immediately there are those that are hesitant hoping to use it to combat or protect themselves against such things.  Many famous individuals
+	are members of the collective.  
+	</p>
+	<div class="collectiveMembers">
+	<div class="charSlides">
+		<h3>
+			Nikola Tesla
+		</h3>
+			<p>
+			An gifted Electic and Engineering, born in Serbia he became Thomas Edisons student and then rival.  Unlike his real life counter part this version has continued to survive.
+			One of the most eccentric members of the collective.  Usually prefers to keep to himself and continue his work.  
+			His work 
+			</p>
+	</div>
+	<div class="charSlides">
+		<h3>
+			Walter & Elisabeth Geervan
+		</h3>
+			<p>
+			Pioneers of the animaiton industry in the earlier 20th century.  The mascot they created actually servers as the mascot of the Collective.  
+			</p>
+	</div>
+	<div class="charSlides">
+		<h3>
+			Mario the Reaper
+		</h3>
+		<p>
+			One of the most infamous mafia leaders in the 1940s.  Called the Al Capone of the American North East.  
+			Rumors persist that his mother dabbled in witch craft.
+		</p>
+		
+	</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	
+	<div class="dot-container">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+	</div>
+	
+	</body>
+	<a href="#" class="previous round">&#8249;</a>
+	<a href="#" class="next round">&#8250;</a>
+	
+	<script>
+	var charIndex = 1;
+showSlides(charIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("charSlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+	</script>
+	
+	<h2>
+	The Stranger
+	</h2>
+	<p>
+	An unknown figure that wanders the entire country helping investigators, he never even gives an alias.  He appears sometimes during narratives to sometimes to help and other times for his own gains.  
+	</p>
+	
+	<script>
+
+	
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("PlayerSlide");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</footer>
+<p>Created by MaelStrom  All rights reserved.</p>
+
+</footer>
+
+</html>
